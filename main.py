@@ -112,5 +112,6 @@ for line in lines:
     target_country = input("Введите название страны: ")
     try:
         print(result_dct[target_country])
+        print("Заболели|Умерли|Вылечились|Активные случаи")
     except Exception:
         print("Введите корректное значение ")
