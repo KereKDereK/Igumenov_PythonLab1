@@ -5,10 +5,11 @@ import requests
 import re
 import csv
 
+
 # Первое задание
 
 
-zip_lab = zipfile.ZipFile('D:\\labs\\lab1\\tiff-4.2.0_lab1.zip')
+zip_lab = zipfile.ZipFile(r'D:\\labs\\lab1\\tiff-4.2.0_lab1.zip')
 os.mkdir('D:\\labs\\lab1\\archive')
 zip_lab.extractall('D:\\labs\\lab1\\archive')
 zip_lab.close()
@@ -24,7 +25,6 @@ for r, d, f in os.walk("D:\\labs\\lab1\\archive"):
             txt_files.append(str(r + '\\' + file))
 print("Список всех файлов с расширением .txt:")
 print('\n'.join(txt_files))
-
 
 result = []
 for file in txt_files:
@@ -112,5 +112,6 @@ for line in lines:
     target_country = input("Введите название страны: ")
     try:
         print(result_dct[target_country])
+        print("Заболели|Умерли|Вылечились|Активные случаи")
     except Exception:
         print("Введите корректное значение ")
